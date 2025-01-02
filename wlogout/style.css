@@ -1,0 +1,91 @@
+* {
+  background-image: none;
+  font-size: 14px;
+  /* Asumiendo un tamaño estándar de fuente */
+}
+
+window {
+  font-family: JetBrains Nerd Font;
+  font-size: 16pt;
+  color: #cdd6f4; /* text */
+  background: url("/home/aslan/.cache/current_wallpaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(30, 30, 46, 0.8);
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  background-color: rgba(200, 220, 255, 0);
+  border-color: #cdd6f4;
+  animation: gradient_f 20s ease-in infinite;
+  border-radius: 80px;
+  margin: 12px;
+}
+
+button:hover {
+  background-color: #89dceb;
+  color: #1e1e2e;
+  background-size: 30%;
+  border-color: #1e1e2e;
+  border-radius: 80px;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682),
+    box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  box-shadow: 0 0 50px #cdd6f4;
+}
+
+/* Adjust the size of the icon or content inside the button */
+button span {
+  font-size: 1.2em; /* Increase the font size */
+}
+
+#lock {
+  background-image: image(url("icons/lock_white.png"));
+}
+
+#logout {
+  background-image: image(url("icons/logout_white.png"));
+}
+
+#suspend {
+  background-image: image(url("icons/suspend_white.png"));
+}
+
+#shutdown {
+  background-image: image(url("icons/shutdown_white.png"));
+}
+
+#hibernate {
+  background-image: image(url("icons/hibernate_white.png"));
+}
+
+#reboot {
+  background-image: image(url("icons/reboot_white.png"));
+}
+
+#lock:hover {
+  background-image: image(url("icons/lock_black.png"));
+}
+
+#logout:hover {
+  background-image: image(url("icons/logout_black.png"));
+}
+
+#suspend:hover {
+  background-image: image(url("icons/suspend_black.png"));
+}
+
+#shutdown:hover {
+  background-image: image(url("icons/shutdown_black.png"));
+}
+
+#hibernate:hover {
+  background-image: image(url("icons/hibernate_black.png"));
+}
+
+#reboot:hover {
+  background-image: image(url("icons/reboot_black.png"));
+}

@@ -1,0 +1,134 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": [
+    "custom/launcher",
+    "custom/wallchange",
+    "hyprland/workspaces",
+    "tray"
+  ],
+  "modules-center": [
+    "custom/music"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "backlight",
+    "network",
+    "custom/weather",
+    "clock",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "all-outputs": true,
+    "active-only": false,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "active": "<span font='12'>󰮯</span>",
+      "empty": "<span font='8'></span>",
+      "persistent": "󰊠"
+    }
+  },
+  "custom/wallchange": {
+    "format": "󰉔{}",
+    "exec": "echo ; echo 󰉔 switch wallpaper",
+    "on-click": "~/myscripts/swwwallpaper.sh",
+    "interval": 86400,
+    "tooltip": true
+  },
+  "custom/launcher": {
+    "format": "{}",
+    "exec": "echo ; echo ''",
+    "on-click": "~/.config/rofi/launchers/type-7/launcher.sh"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "custom/music": {
+    "format": "  {}",
+    "escape": true,
+    "interval": 5,
+    "tooltip": false,
+    "exec": "~/myscripts/music_status.sh",
+    "on-click": "playerctl play-pause",
+    "max-length": 50
+  },
+  "pulseaudio": {
+    "format": "{icon}   {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ]
+    },
+    "scroll-step": 1,
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ]
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "   {:%d/%m/%Y}",
+    "format": "   {:%H:%M}",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": "   {}%",
+    "interval": 1,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  "custom/weather": {
+    "format": "{}",
+    "exec": "~/myscripts/weather_status.sh",
+    "tooltip": true,
+    "interval": 3600
+  },
+  "cpu": {
+    "interval": 30,
+    "format": "   {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": "   {}%",
+    "max-length": 10
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "   ({signalStrength}%)",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout &",
+    "format": ""
+  }
+}

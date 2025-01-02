@@ -1,0 +1,34 @@
+set number
+syntax enable
+set showcmd
+set encoding=utf-8
+set showmatch
+set expandtab
+set tabstop=4
+set shiftwidth=0
+set softtabstop=0
+set autoindent
+set smarttab
+
+call plug#begin()
+	Plug 'nvim-lualine/lualine.nvim'
+	Plug 'nvim-tree/nvim-web-devicons'
+	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+call plug#end()
+
+lua << END
+require('lualine').setup {
+	options = {
+		icons_enabled = true,
+		theme = 'palenight'
+	}
+}
+
+require('catppuccin').setup {
+	flavour = 'mocha',
+    transparent_background = true
+}
+   
+vim.cmd.colorscheme "catppuccin"
+
+END

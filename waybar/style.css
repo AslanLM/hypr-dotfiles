@@ -1,0 +1,149 @@
+* {
+  font-family: JetBrains Nerd Font; /* FantasqueSansMono */
+  font-size: 12px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: #cdd6f4; /* @text */
+  margin: 5px 5px;
+}
+
+#workspaces {
+  margin: 5px 0;
+  border-radius: 18px;
+  background: #1e1e2e; /* @base */
+  transition: none;
+}
+
+#workspaces button {
+  transition: none;
+  color: #b5e8e6;
+  background: transparent;
+  margin-right: 10px;
+  border-radius: 1rem;
+}
+
+#workspaces button.persistent {
+  transition: none;
+  color: #7aa2f7;
+  background: transparent;
+  font-size: 4px;
+}
+
+#workspaces button.empty {
+  color: #583794;
+  font-size: 2px;
+  transition: none;
+  background: transparent;
+}
+
+#workspaces button.active {
+  transition: none;
+  color: #e0af68;
+  background: transparent;
+  font-size: 4px;
+}
+
+#workspaces button:hover {
+  border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#custom-weather,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#custom-lock,
+#custom-wallchange,
+#custom-launcher,
+#custom-power {
+  background-color: #1e1e2e; /* @base */
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+}
+
+#clock {
+  color: #89b4fa; /* @blue */
+  border-radius: 0px;
+}
+
+#custom-weather {
+  border-radius: 1rem 0px 0px 1rem;
+  color: #f38ba8; /* @red */
+}
+
+#network {
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+  color: #a6e3a1; /* @green */
+}
+
+#backlight {
+  color: #f9e2af; /* @yellow */
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: #eba0ac; /* @maroon */
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: #cba6f7; /* @mauve */
+  border-radius: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: #b4befe; /* @lavender */
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: #f38ba8; /* @red */
+}
+
+#custom-wallchange {
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: #f2cdcd; /* @flamingo */
+}
+
+#custom-wallchange:hover {
+  color: #cba6f7; /* @mauve */
+}
+
+#custom-launcher {
+  border-radius: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  color: #b4befe; /* @lavender */
+}
+
+#custom-launcher:hover{
+  color: #583794;
+}
+
+#tray {
+  margin-left: 1rem;
+  border-radius: 1rem;
+}
+
+#cpu {
+  color: #b4befe;
+  border-radius: 1rem 0px 0px 1rem;
+}
+
+#memory {
+  color: #7aa2f7;
+  border-radius: 0px 1rem 1rem 0px;
+}
